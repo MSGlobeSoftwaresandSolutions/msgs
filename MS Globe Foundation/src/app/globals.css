@@ -18,7 +18,9 @@ body::after { position: fixed; inset: 0; z-index: -1; pointer-events: none; cont
 @keyframes reveal { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes drift { 0%, 100% { transform: translate3d(0, 0, 0) rotate(-8deg); } 50% { transform: translate3d(0, -14px, 0) rotate(-4deg); } }
 @keyframes scan { from { transform: translateY(-100%); } to { transform: translateY(500%); } }
+@keyframes brand-pulse { 0%, 100% { transform: translate(-50%, -50%) scale(1); } 50% { transform: translate(-50%, -50%) scale(1.045); } }
 .globe-orbit { animation: drift 9s ease-in-out infinite; transform-origin: center; }
+.brand-orbit { animation: brand-pulse 5s ease-in-out infinite; }
 .scanline { animation: scan 5s linear infinite; }
 .button-shine { position: relative; overflow: hidden; }
 .button-shine::after { position: absolute; inset: 0; content: ""; transform: translateX(-120%); background: linear-gradient(100deg, transparent, rgba(255,255,255,.2), transparent); transition: transform .6s; }
