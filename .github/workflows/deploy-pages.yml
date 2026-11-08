@@ -29,7 +29,7 @@ jobs:
       - name: Build static site
         working-directory: MS Globe Foundation
         env:
-          NEXT_PUBLIC_BASE_PATH: /MSGLOBEDOMAIN
+          NEXT_PUBLIC_BASE_PATH: /msgs
         run: npm ci && npm run build
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
